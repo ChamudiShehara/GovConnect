@@ -1,40 +1,39 @@
-import Complaint from "../models/Complaint.js";
 import Citizen from "../models/Citizen.js";
+import Complaint from "../models/Complaint.js";
 
-/* =========================
-   CREATE COMPLAINT
-========================= */
 export const createComplaint = async (req, res) => {
   try {
-    const {
-      name,
-      description,
-      phone,
-      address,
-      thirdParty,
-    } = req.body;
+    let citizen = await Citizen.findOne({ user: req.user._id });
 
-    // find citizen profile
-    const citizen = await Citizen.findOne({ user: req.user.id });
     if (!citizen) {
-      return res.status(404).json({ message: "Citizen profile not found" });
+      citizen = await Citizen.create({
+        user: req.user._id,
+        complaints: [],
+        votes: [],
+      });
     }
 
     const complaint = await Complaint.create({
       citizen: citizen._id,
-      name,
-      description,
-      phone,
-      address,
-      thirdParty: thirdParty || null,
+      name: req.body.name,
+      description: req.body.description,
+      phoneNumber: req.body.phoneNumber, // ✅ FIXED
+      address: req.body.address,
+
+      thirdParty: {
+        name: req.body.thirdPartyName,
+        phoneNumber: req.body.thirdPartyPhoneNumber,
+        address: req.body.thirdPartyAddress,
+      },
     });
 
     citizen.complaints.push(complaint._id);
     await citizen.save();
 
-    res.status(201).json(complaint);
+    res.status(201).json({ message: "Complaint created", complaint });
   } catch (err) {
-    console.error(err);
+    console.error("Create complaint error:", err);
     res.status(500).json({ message: "Failed to create complaint" });
   }
 };
+

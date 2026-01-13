@@ -1,10 +1,10 @@
 import express from "express";
-import { protect } from "../middlewares/auth.middleware.js";
 import { createComplaint } from "../controllers/complaint.controller.js";
+import { protect } from "../middlewares/auth.middleware.js";
+import { isCitizen } from "../middlewares/role.middleware.js";
 
 const router = express.Router();
 
-// Citizen creates complaint
-router.post("/create", protect, createComplaint);
+router.post("/create", protect, isCitizen, createComplaint);
 
 export default router;

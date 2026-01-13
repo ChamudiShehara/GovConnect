@@ -6,6 +6,7 @@ import OAuthSuccess from "./pages/OAuthSuccess";
 import GoogleSelectRole from "./pages/GoogleSelectRole";
 import MinisterDashboard from "./pages/minister/MinisterDashboard";
 import DepartmentPage from "./pages/minister/DepartmentPage";
+import NewComplaint from "./pages/complaints/NewComplaint";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/google-select-role" element={<GoogleSelectRole />} />
         <Route path="/minister/dashboard" element={<MinisterDashboard />} />
         <Route path="/departments/:id" element={<DepartmentPage />} />
+        <Route path="/complaints/new" element={<NewComplaint />} />
       </Routes>
     </BrowserRouter>
   );

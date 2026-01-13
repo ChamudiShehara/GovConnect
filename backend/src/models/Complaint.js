@@ -1,11 +1,5 @@
 import mongoose from "mongoose";
 
-const thirdPartySchema = new mongoose.Schema({
-  name: String,
-  phone: String,
-  address: String,
-});
-
 const complaintSchema = new mongoose.Schema(
   {
     citizen: {
@@ -14,29 +8,17 @@ const complaintSchema = new mongoose.Schema(
       required: true,
     },
 
-    name: {
-      type: String,
-      required: true,
-    },
+    // Main complaint details
+    name: { type: String, required: true },
+    description: { type: String, required: true },
+    phoneNumber: { type: String, required: true },
+    address: { type: String, required: true },
 
-    description: {
-      type: String,
-      required: true,
-    },
-
-    phone: {
-      type: String,
-      required: true,
-    },
-
-    address: {
-      type: String,
-      required: true,
-    },
-
+    // Optional third-party details
     thirdParty: {
-      type: thirdPartySchema,
-      default: null,
+      name: String,
+      phoneNumber: String,
+      address: String,
     },
 
     status: {
