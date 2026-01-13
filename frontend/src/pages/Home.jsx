@@ -21,12 +21,21 @@ export default function Home() {
             </p>
 
             {user.role === "CITIZEN" && (
-              <Link
-                to="/complaints/new"
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg"
-              >
-                Submit a Complaint
-              </Link>
+              <div className="flex gap-4">
+                <Link
+                  to="/complaints/new"
+                  className="px-6 py-3 bg-blue-600 text-white rounded-lg"
+                >
+                  Submit Complaint
+                </Link>
+
+                <Link
+                  to="/departments"
+                  className="px-6 py-3 bg-green-600 text-white rounded-lg"
+                >
+                  View Departments
+                </Link>
+              </div>
             )}
 
             {user.role === "AGENT" && (
