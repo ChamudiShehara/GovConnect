@@ -1,22 +1,31 @@
-export const detectDepartment = async (description, departmentNames) => {
+export const askOllama = async (prompt) => {
   const response = await fetch("http://localhost:11434/api/generate", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       model: "llama3",
-      prompt: `
-Choose ONLY ONE department from this list:
-${departmentNames.join(", ")}
-
-Complaint:
-"${description}"
-
-Reply with ONLY the department name.
-`,
+      prompt,
       stream: false,
     }),
   });
 
   const data = await response.json();
-  return data.response.trim().toLowerCase();
+  return data.response;
+};
+
+export const detectDepartment = async (description, departmentNames) => {
+  const prompt = `
+Departments:
+${departmentNames.join(", ")}
+
+Rules:
+- Reply ONLY with department name
+- If no match, reply: NONE
+
+Complaint:
+"${description}"
+`;
+
+  const result = await askOllama(prompt);
+  return result.trim().toLowerCase();
 };

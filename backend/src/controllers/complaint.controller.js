@@ -1,7 +1,7 @@
 import Citizen from "../models/Citizen.js";
 import Complaint from "../models/Complaint.js";
 import Department from "../models/Department.js";
-import { detectDepartment } from "../services/ollama.service.js";
+import { classifyComplaint } from "../rag/classifier.js";
 
 export const createComplaint = async (req, res) => {
   try {
@@ -15,23 +15,23 @@ export const createComplaint = async (req, res) => {
       });
     }
 
-    // 🔹 Get all departments
+    // ✅ 1. Fetch departments
     const departments = await Department.find();
-    const departmentNames = departments.map(d => d.name);
 
-    // 🔹 Ask Ollama
-    const aiResult = await detectDepartment(
+    // ✅ 2. AI classify
+    const matchedDepartmentName = await classifyComplaint(
       req.body.description,
-      departmentNames
+      departments
     );
 
-    // 🔹 Match department
+    // ✅ 3. Find department object
     const matchedDepartment = departments.find(
-      d => d.name.toLowerCase() === aiResult
+      d => d.name.toLowerCase() === matchedDepartmentName
     );
 
-    console.log("AI matched department:", aiResult);
+    console.log("AI matched:", matchedDepartmentName);
 
+    // ✅ 4. Create complaint
     const complaint = await Complaint.create({
       citizen: citizen._id,
       name: req.body.name,
@@ -51,7 +51,7 @@ export const createComplaint = async (req, res) => {
 
     res.status(201).json({
       message: "Complaint created",
-      department: matchedDepartment?.name || "Not matched",
+      assignedDepartment: matchedDepartment?.name || "Not matched",
       complaint,
     });
 
