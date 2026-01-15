@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Education",
+    "keywords": ["school", "teacher", "exam", "student", "university"]
+  },
+  {
+    "name": "Health",
+    "keywords": ["hospital", "doctor", "medicine", "clinic"]
+  },
+  {
+    "name": "Transport",
+    "keywords": ["bus", "road", "traffic", "license"]
+  }
+]

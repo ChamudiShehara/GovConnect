@@ -8,17 +8,41 @@ const complaintSchema = new mongoose.Schema(
       required: true,
     },
 
-    // Main complaint details
-    name: { type: String, required: true },
-    description: { type: String, required: true },
-    phoneNumber: { type: String, required: true },
-    address: { type: String, required: true },
+    // Auto-assigned department
+    department: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Department",
+      default: null,
+    },
 
-    // Optional third-party details
+    // Complaint details
+    name: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+
+    description: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+
+    phoneNumber: {
+      type: String,
+      required: true,
+    },
+
+    address: {
+      type: String,
+      required: true,
+    },
+
+    // Optional third-party
     thirdParty: {
-      name: String,
-      phoneNumber: String,
-      address: String,
+      name: { type: String, default: "" },
+      phoneNumber: { type: String, default: "" },
+      address: { type: String, default: "" },
     },
 
     status: {
