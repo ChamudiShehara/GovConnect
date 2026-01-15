@@ -50,6 +50,13 @@ const complaintSchema = new mongoose.Schema(
       enum: ["PENDING", "IN_PROGRESS", "RESOLVED"],
       default: "PENDING",
     },
+
+    // 🔥 Priority field added
+    priority: {
+      type: String,
+      enum: ["HIGH", "MEDIUM", "LOW"],
+      default: "MEDIUM",
+    },
   },
   { timestamps: true }
 );
