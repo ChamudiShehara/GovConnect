@@ -9,6 +9,14 @@ const departmentSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
+
+    // Array of complaints for this department
+    complaints: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Complaint",
+      },
+    ],
   },
   { timestamps: true }
 );
