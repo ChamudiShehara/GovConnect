@@ -9,11 +9,18 @@ export default function NewComplaint() {
   const [form, setForm] = useState({
     name: "",
     description: "",
-    phoneNumber: "",                // ✅ FIXED
+    phoneNumber: "",
     address: "",
     thirdPartyName: "",
-    thirdPartyPhoneNumber: "",      // ✅ FIXED
+    thirdPartyPhoneNumber: "",
     thirdPartyAddress: "",
+  });
+
+  // ✅ Popup state
+  const [showPopup, setShowPopup] = useState(false);
+  const [confirmation, setConfirmation] = useState({
+    department: "",
+    priority: "",
   });
 
   const handleChange = (e) => {
@@ -26,7 +33,7 @@ export default function NewComplaint() {
     try {
       const token = localStorage.getItem("token");
 
-      await axios.post(
+      const response = await axios.post(
         "http://localhost:5000/api/complaints/create",
         form,
         {
@@ -36,12 +43,23 @@ export default function NewComplaint() {
         }
       );
 
-      alert("Complaint submitted successfully ✅");
-      navigate("/");
+      // ✅ Store response data for popup
+      setConfirmation({
+        department: response.data.assignedDepartment,
+        priority: response.data.priority,
+      });
+
+      setShowPopup(true);
+
     } catch (err) {
       console.error("Create complaint error:", err);
       alert(err.response?.data?.message || "Failed to submit complaint");
     }
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
+    navigate("/");
   };
 
   return (
@@ -52,8 +70,6 @@ export default function NewComplaint() {
         <h2 className="text-2xl font-bold mb-6">Submit a Complaint</h2>
 
         <form onSubmit={submitComplaint} className="space-y-4">
-          <h3 className="font-semibold text-lg">Your Details</h3>
-
           <input
             name="name"
             placeholder="Your Name"
@@ -64,7 +80,7 @@ export default function NewComplaint() {
           />
 
           <input
-            name="phoneNumber"          // ✅ FIXED
+            name="phoneNumber"
             placeholder="Phone Number"
             value={form.phoneNumber}
             onChange={handleChange}
@@ -90,9 +106,7 @@ export default function NewComplaint() {
             className="w-full border p-2 rounded"
           />
 
-          <h3 className="font-semibold text-lg mt-6">
-            Third Party Details (Optional)
-          </h3>
+          <h3 className="font-semibold mt-4">Third Party (Optional)</h3>
 
           <input
             name="thirdPartyName"
@@ -103,7 +117,7 @@ export default function NewComplaint() {
           />
 
           <input
-            name="thirdPartyPhoneNumber"     // ✅ FIXED
+            name="thirdPartyPhoneNumber"
             placeholder="Third Party Phone"
             value={form.thirdPartyPhoneNumber}
             onChange={handleChange}
@@ -120,12 +134,42 @@ export default function NewComplaint() {
 
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded mt-4"
+            className="w-full bg-blue-600 text-white py-2 rounded"
           >
             Submit Complaint
           </button>
         </form>
       </div>
+
+      {/* ✅ Confirmation Popup */}
+      {showPopup && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white p-6 rounded shadow-lg max-w-md w-full text-center">
+            <h2 className="text-xl font-bold mb-4 text-green-600">
+              Complaint Submitted Successfully ✅
+            </h2>
+
+            <p className="mb-2">
+              <strong>Assigned Department:</strong>
+              <br />
+              {confirmation.department}
+            </p>
+
+            <p className="mb-4">
+              <strong>Priority:</strong>
+              <br />
+              {confirmation.priority}
+            </p>
+
+            <button
+              onClick={closePopup}
+              className="bg-blue-600 text-white px-6 py-2 rounded"
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
