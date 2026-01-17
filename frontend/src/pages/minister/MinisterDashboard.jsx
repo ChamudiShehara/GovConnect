@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 
 export default function MinisterDashboard() {
@@ -8,6 +9,7 @@ export default function MinisterDashboard() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
+  const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("user"));
 
   useEffect(() => {
@@ -50,7 +52,7 @@ export default function MinisterDashboard() {
       );
 
       setName("");
-      fetchDepartments(); // 🔄 refresh list
+      fetchDepartments(); // refresh list
     } catch (err) {
       console.error(err);
       setError(
@@ -113,7 +115,10 @@ export default function MinisterDashboard() {
             {departments.map((dept) => (
               <div
                 key={dept._id}
-                className="bg-white p-4 rounded shadow"
+                onClick={() =>
+                  navigate(`/minister/departments/${dept._id}`)
+                }
+                className="bg-white p-4 rounded shadow cursor-pointer hover:bg-gray-50 transition"
               >
                 <h3 className="text-lg font-semibold">
                   {dept.name}
