@@ -1,14 +1,61 @@
 [
   {
+    "name": "Environment & Public Nuisance",
+    "keywords": [
+      "noise", "noise pollution",
+      "rathri", "night", "late night",
+      "sleep karanna baha",
+      "party", "festival noise",
+      "factory noise",
+      "construction noise",
+      "burning garbage",
+      "air pollution"
+    ]
+  },
+  {
+    "name": "Electricity & Power",
+    "keywords": [
+      "electric", "electric wire", "wire",
+      "electric pole", "pole",
+      "transformer", "meter box",
+      "street light", "street lamp", "lamp",
+      "spark", "exposed wire",
+      "power", "current"
+    ]
+  },
+   {
+    "name": "Waste Management",
+    "keywords": [
+      "garbage", "kasala", "waste", "dump",
+      "garbage burn", "burn karanawa",
+      "bad smell", "odor",
+      "garbage truck", "bin", "overflowing bin",
+      "illegal dumping",
+      "waste pit", "sewer smell"
+    ]
+  },
+  {
     "name": "Education",
-    "keywords": ["school", "teacher", "exam", "student", "university"]
+    "keywords": ["school",
+    "teacher","student","exam", "education","class","lesson","syllabus","principal","attendance","university","college",
+    "results","marks","grades","textbook","classroom","laboratory","library"]
   },
   {
     "name": "Health",
-    "keywords": ["hospital", "doctor", "medicine", "clinic"]
+    "keywords": ["hospital", "doctor", "medicine", "clinic", "medicine",
+      "emergency ward", "ward overcrowded",
+      "public toilet", "toilet",
+      "unhygienic", "health risk",
+      "rats", "disease", "infection"]
   },
   {
     "name": "Transport",
-    "keywords": ["bus", "road", "traffic", "license"]
+    "keywords": ["bus", "road", "traffic", "license","paara", "paaara", "bridge",
+      "traffic", "traffic signal", "signal",
+      "illegal parking", "parking",
+      "bus", "bus stop",
+      "footpath", "pavement", "sidewalk",
+      "access road", "main road",
+      "drainage road", "road drainage"]
   }
 ]

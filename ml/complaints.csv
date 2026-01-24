@@ -1,106 +1,28 @@
 text,priority
 "Road is completely broken",HIGH
 "Street light not working",MEDIUM
-"Garbage collection delayed",LOW
+"Garbage is not collected from our street for several days",MEDIUM
+"Garbage collection delayed",MEDIUM
 "Hospital emergency ward overcrowded",HIGH
 "Residential area eke garbage burn karanawa",MEDIUM
-"Geda issaraha kasala dump karanawa, bad smell ena widihak",MEDIUM
+"Gedara issaraha kasala dump karanawa, bad smell ena widihak",MEDIUM
 "Rathri 10 passe loku noise, sleep karanna baha",HIGH
-"Canal eka block wela water overflow wenawa",MEDIUM
-"Electric wire laga gasak loku risk ekak",MEDIUM
-"Unauthorized wall ekak hadala public land block wela",LOW
+"Canal eka block wela water overflow wenawa",HIGH
+"Electric wire laga gasak loku risk ekak",HIGH
 "Illegal parking nisa access road eka close",MEDIUM
 "Hospital emergency ward overcrowded",HIGH
 "Street light not working",MEDIUM
 "Road is completely broken",HIGH
-"Residential area eke garbage burn karanawa",HIGH
-"Residential area eke garbage burn karanawa",LOW
-"Rathri 10 passe loku noise, sleep karanna baha",LOW
-"Residential area eke garbage burn karanawa",HIGH
-"Canal eka block wela water overflow wenawa",LOW
 "Rathri 10 passe loku noise, sleep karanna baha",HIGH
 "Geda issaraha kasala dump karanawa, bad smell ena widihak",LOW
 "Unauthorized wall ekak hadala public land block wela",HIGH
-"Illegal parking nisa access road eka close",MEDIUM
-"Rathri 10 passe loku noise, sleep karanna baha",LOW
-text,priority
-"Residential area eke garbage burn karanawa",MEDIUM
-"Geda issaraha kasala dump karanawa, bad smell ena widihak",MEDIUM
-"Rathri 10 passe loku noise, sleep karanna baha",HIGH
-"Geda issaraha kasala dump karanawa, bad smell ena widihak",HIGH
 "Canal eka block wela water overflow wenawa",MEDIUM
-"Electric wire laga gasak loku risk ekak",MEDIUM
-"Electric wire laga gasak loku risk ekak",MEDIUM
-"Rathri 10 passe loku noise, sleep karanna baha",LOW
-"Geda issaraha kasala dump karanawa, bad smell ena widihak",LOW
-"Residential area eke garbage burn karanawa",LOW
-"Geda issaraha kasala dump karanawa, bad smell ena widihak",MEDIUM
-"Unauthorized wall ekak hadala public land block wela",LOW
-"Residential area eke garbage burn karanawa",HIGH
-"Residential area eke garbage burn karanawa",MEDIUM
-"Canal eka block wela water overflow wenawa",LOW
-"Geda issaraha kasala dump karanawa, bad smell ena widihak",HIGH
-"Geda issaraha kasala dump karanawa, bad smell ena widihak",HIGH
-"Rathri 10 passe loku noise, sleep karanna baha",HIGH
-"Residential area eke garbage burn karanawa",MEDIUM
-"Unauthorized wall ekak hadala public land block wela",HIGH
-"Geda issaraha kasala dump karanawa, bad smell ena widihak",HIGH
-"Geda issaraha kasala dump karanawa, bad smell ena widihak",LOW
-"Residential area eke garbage burn karanawa",MEDIUM
-"Canal eka block wela water overflow wenawa",MEDIUM
-"Residential area eke garbage burn karanawa",LOW
-"Unauthorized wall ekak hadala public land block wela",HIGH
-"Residential area eke garbage burn karanawa",LOW
 "Illegal parking nisa access road eka close",MEDIUM
-"Residential area eke garbage burn karanawa",HIGH
+"paara mada loku valak",High
 "Rathri 10 passe loku noise, sleep karanna baha",LOW
-"Geda issaraha kasala dump karanawa, bad smell ena widihak",MEDIUM
-"Canal eka block wela water overflow wenawa",MEDIUM
-"Residential area eke garbage burn karanawa",HIGH
-"Electric wire laga gasak loku risk ekak",MEDIUM
-"Rathri 10 passe loku noise, sleep karanna baha",HIGH
-"Canal eka block wela water overflow wenawa",LOW
-"Canal eka block wela water overflow wenawa",LOW
-"Rathri 10 passe loku noise, sleep karanna baha",HIGH
-"Illegal parking nisa access road eka close",MEDIUM
-"Residential area eke garbage burn karanawa",HIGH
-"Rathri 10 passe loku noise, sleep karanna baha",LOW
-"Canal eka block wela water overflow wenawa",HIGH
-"Rathri 10 passe loku noise, sleep karanna baha",LOW
-"Unauthorized wall ekak hadala public land block wela",LOW
-"Geda issaraha kasala dump karanawa, bad smell ena widihak",MEDIUM
-"Rathri 10 passe loku noise, sleep karanna baha",MEDIUM
 "Illegal parking nisa access road eka close",LOW
-text,priority
-"Residential area eke garbage burn karanawa",MEDIUM
-"Geda issaraha kasala dump karanawa, bad smell ena widihak",MEDIUM
-"Rathri 10 passe loku noise, sleep karanna baha",HIGH
-"Geda issaraha kasala dump karanawa, bad smell ena widihak",HIGH
-"Canal eka block wela water overflow wenawa",MEDIUM
-"Electric wire laga gasak loku risk ekak",MEDIUM
-"Electric wire laga gasak loku risk ekak",MEDIUM
-"Rathri 10 passe loku noise, sleep karanna baha",LOW
-"Geda issaraha kasala dump karanawa, bad smell ena widihak",LOW
-"Residential area eke garbage burn karanawa",LOW
-"Geda issaraha kasala dump karanawa, bad smell ena widihak",MEDIUM
 "Unauthorized wall ekak hadala public land block wela",LOW
 "Residential area eke garbage burn karanawa",HIGH
-"Residential area eke garbage burn karanawa",MEDIUM
-"Canal eka block wela water overflow wenawa",LOW
-"Geda issaraha kasala dump karanawa, bad smell ena widihak",HIGH
-"Geda issaraha kasala dump karanawa, bad smell ena widihak",HIGH
-"Rathri 10 passe loku noise, sleep karanna baha",HIGH
-"Residential area eke garbage burn karanawa",MEDIUM
-"Unauthorized wall ekak hadala public land block wela",HIGH
-"Geda issaraha kasala dump karanawa, bad smell ena widihak",HIGH
-"Geda issaraha kasala dump karanawa, bad smell ena widihak",LOW
-"Residential area eke garbage burn karanawa",MEDIUM
-"Canal eka block wela water overflow wenawa",MEDIUM
-"Residential area eke garbage burn karanawa",LOW
-"Unauthorized wall ekak hadala public land block wela",HIGH
-"Residential area eke garbage burn karanawa",LOW
-"Illegal parking nisa access road eka close",MEDIUM
-"Residential area eke garbage burn karanawa",HIGH
 "Rathri 10 passe loku noise, sleep karanna baha",LOW
 "Geda issaraha kasala dump karanawa, bad smell ena widihak",MEDIUM
 "Canal eka block wela water overflow wenawa",MEDIUM
@@ -108,7 +30,7 @@ text,priority
 "Electric wire laga gasak loku risk ekak",MEDIUM
 "Rathri 10 passe loku noise, sleep karanna baha",HIGH
 "Canal eka block wela water overflow wenawa",LOW
-"Canal eka block wela water overflow wenawa",LOW
+
 "Rathri 10 passe loku noise, sleep karanna baha",HIGH
 "Illegal parking nisa access road eka close",MEDIUM
 "Residential area eke garbage burn karanawa",HIGH
@@ -210,3 +132,63 @@ text,priority
 "Noise pollution from festival celebrations",MEDIUM
 "Cracks on main bridge causing hazards",HIGH
 "Overflowing drain near hospital entrance",HIGH
+"Electric wires are hanging dangerously near the road",HIGH
+"Electric pole is damaged and may fall",HIGH
+"Street lights are not working at night",MEDIUM
+"Power supply is interrupted frequently in our area",MEDIUM
+"Electric transformer is making sparks",HIGH
+"Broken electric wire on the road causing danger",HIGH
+"Electric meter box is exposed and unsafe",MEDIUM
+"Street lights are flickering continuously",LOW
+"Electric pole leaning dangerously after heavy rain",HIGH
+"Power outage for many hours without notice",LOW
+"Rathri wela loku noise nisa sleep karanna baha",HIGH
+"Late night party noise disturbing residents",HIGH
+"Factory noise throughout the night causing discomfort",HIGH
+"Construction noise early morning and night time",MEDIUM
+"Residential area eke garbage burning karanawa",HIGH
+"Burning garbage causing bad smell and air pollution",HIGH
+"Festival noise late night disturbing elders and children",MEDIUM
+"Night time loud music from nearby shop",MEDIUM
+"Noise pollution from vehicles during night",LOW
+"People are using loudspeakers late at night",MEDIUM
+"Factory releasing smoke and causing air pollution",HIGH
+"Garbage burning near houses creating health risk",HIGH
+"Rathri 10 passe loku sound system use karanawa",HIGH
+"Construction work going on during night time",MEDIUM
+"Air pollution due to continuous garbage burning",HIGH
+"Noise from nearby wedding hall late at night",MEDIUM
+"Night club noise disturbing residential area",HIGH
+"Heavy noise from festival celebrations at night",MEDIUM
+"Loud generator noise during night time",LOW
+"People burning plastic waste in open area",HIGH
+"Main road is cracked and unsafe for vehicles",HIGH
+"Street light near bus stop is not working",MEDIUM
+"Garbage collection vehicle skipped our street",MEDIUM
+"Blocked drainage causing mosquito breeding",MEDIUM
+"Electric cable hanging dangerously close to houses",HIGH
+"Illegal parking blocking ambulance access",HIGH
+"Canal overflow flooding nearby houses",HIGH
+"Construction noise continuing after midnight",HIGH
+"Open garbage dumping creating bad odor",MEDIUM
+"Street cleaning not done after heavy rain",LOW
+"Electric pole damaged due to accident",HIGH
+"Frequent power cuts affecting daily activities",MEDIUM
+"Public waste bin overflowing near market",MEDIUM
+"Unauthorized construction blocking public pathway",HIGH
+"Traffic signal not functioning during peak hours",HIGH
+"Broken street light causing safety issues",MEDIUM
+"Factory emitting smoke causing air pollution",HIGH
+"Garbage dumped near river polluting water",MEDIUM
+"Stagnant water in drain causing health risk",MEDIUM
+"Loud music from party disturbing sleep",HIGH
+"Road potholes filled with water after rain",HIGH
+"Burning plastic waste causing toxic smoke",HIGH
+"Street lamp turning on and off frequently",MEDIUM
+"Illegal parking near hospital entrance",HIGH
+"Sewer overflow spreading bad smell",HIGH
+"Construction materials blocking footpath",MEDIUM
+"Electric transformer overheating and sparking",HIGH
+"Noise from generators during night time",MEDIUM
+"Water leakage from underground pipe",HIGH
+"Public park not maintained and full of waste",MEDIUM
