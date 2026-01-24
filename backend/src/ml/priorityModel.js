@@ -13,12 +13,31 @@ export const predictPriority = async (description) => {
 
   const text = description.toLowerCase();
 
-  // High priority keywords
-  const highKeywords = ["accident", "urgent", "danger", "emergency", "injury", "fire"];
-  // Medium priority keywords
-  const mediumKeywords = ["delay", "broken", "problem", "issue", "repair"];
+  // High priority keywords//
+  const highKeywords = ["accident", "urgent", "danger", "emergency", "injury", "fire","burning", "burn", 
+    "sparks","broken electric","broken","death",
+  "electric wire", "broken electric", "electric pole", "transformer",
+  "electricity", "power outage","hospital", "emergency", "overcrowded",
+  "flood", "overflow", "water overflow", "blocked drainage", "canal overflow", "sewer",
+  "accident", "potholes", "road broken", "bridge cracks","sleep karanna baha", "late night noise", "night club",
+  "loud music", "sound system","pollution",
+  "unauthorized construction", "public land block"];
+  
+
+
+  // Medium priority keywords//
+  const mediumKeywords = ["delay",  "problem", "issue", "street light", "flickering",
+  "garbage", "waste", "bad smell", "rats","noise", "disturbance", "factory noise",
+  "illegal parking", "traffic", "road block","not working"
+  ,"access road","canal block", "water logging", "drainage",
+  "delay", "interrupted","not maintained", "not functioning","repair"];
+
+  
   // Low priority keywords
-  const lowKeywords = ["suggestion", "feedback", "request", "query"];
+  const lowKeywords = ["suggestion", "feedback",
+  "not swept",
+  "maintenance request",
+  "information","request", "query"];
 
   // Check for high priority
   if (highKeywords.some((word) => text.includes(word))) return "HIGH";
