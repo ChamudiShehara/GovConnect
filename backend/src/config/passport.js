@@ -10,7 +10,7 @@ console.log("PASSPORT ENV CHECK:", {
   secret: process.env.GOOGLE_CLIENT_SECRET,
   callback: process.env.GOOGLE_CALLBACK_URL,
 });
-
+// Google OAuth Strategy
 passport.use(
   new GoogleStrategy(
     {
@@ -30,7 +30,7 @@ passport.use(
             role: null, // 👈 ask later
           });
         }
-
+//✅ Successfully found or created user
         done(null, user);
       } catch (err) {
         done(err, null);

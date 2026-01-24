@@ -9,7 +9,7 @@ const generateToken = (user) =>
     process.env.JWT_SECRET,
     { expiresIn: "7d" }
   );
-
+//jwt token base autentication
 /* =========================
    REGISTER (WITH ROLE)
 ========================= */

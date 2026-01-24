@@ -1,4 +1,4 @@
-import DepartmentVector from "../models/DepartmentVector.js";
+import DepartmentVector from "../../data/departments.json";
 import { embedText } from "./embedder.js";
 
 export const retrieveRelevantDepartments = async (text) => {
