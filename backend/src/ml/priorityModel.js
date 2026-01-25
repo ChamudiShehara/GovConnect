@@ -1,53 +1,41 @@
 // backend/src/ml/priorityModel.js
 
+import { spawn } from "child_process";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 /**
- * Simple complaint priority predictor
- * Returns one of: "HIGH", "MEDIUM", "LOW"
- *
- * This is a placeholder for a real ML model.
- * Currently, it uses keyword matching from the complaint description.
+ * Predict priority using trained ML model (Python)
  */
+export const predictPriority = (text) => {
+  return new Promise((resolve, reject) => {
+    if (!text || text.trim() === "") return resolve("MEDIUM");
 
-export const predictPriority = async (description) => {
-  if (!description || description.trim() === "") return "MEDIUM";
+    const scriptPath = path.join(__dirname, "predict_priority.py");
 
-  const text = description.toLowerCase();
+    const py = spawn("python", [scriptPath, text]);
 
-  // High priority keywords//
-  const highKeywords = ["accident", "urgent", "danger", "emergency", "injury", "fire","burning", "burn", 
-    "sparks","broken electric","broken","death",
-  "electric wire", "broken electric", "electric pole", "transformer",
-  "electricity", "power outage","hospital", "emergency", "overcrowded",
-  "flood", "overflow", "water overflow", "blocked drainage", "canal overflow", "sewer",
-  "accident", "potholes", "road broken", "bridge cracks","sleep karanna baha", "late night noise", "night club",
-  "loud music", "sound system","pollution",
-  "unauthorized construction", "public land block"];
-  
+    let output = "";
+    let errorOutput = "";
 
+    py.stdout.on("data", (data) => {
+      output += data.toString();
+    });
 
-  // Medium priority keywords//
-  const mediumKeywords = ["delay",  "problem", "issue", "street light", "flickering",
-  "garbage", "waste", "bad smell", "rats","noise", "disturbance", "factory noise",
-  "illegal parking", "traffic", "road block","not working"
-  ,"access road","canal block", "water logging", "drainage",
-  "delay", "interrupted","not maintained", "not functioning","repair"];
+    py.stderr.on("data", (err) => {
+      errorOutput += err.toString();
+    });
 
-  
-  // Low priority keywords
-  const lowKeywords = ["suggestion", "feedback",
-  "not swept",
-  "maintenance request",
-  "information","request", "query"];
-
-  // Check for high priority
-  if (highKeywords.some((word) => text.includes(word))) return "HIGH";
-
-  // Check for medium priority
-  if (mediumKeywords.some((word) => text.includes(word))) return "MEDIUM";
-
-  // Check for low priority
-  if (lowKeywords.some((word) => text.includes(word))) return "LOW";
-
-  // Default priority
-  return "MEDIUM";
+    py.on("close", (code) => {
+      if (code !== 0) {
+        console.error("❌ Python error:", errorOutput);
+        reject(new Error("ML prediction failed"));
+      } else {
+        resolve(output.trim());
+      }
+    });
+  });
 };

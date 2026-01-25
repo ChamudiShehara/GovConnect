@@ -1,6 +1,6 @@
 [
   {
-    "name": "Transport",
+    "name": "Transport", 
 
     "description": "Handles public transport services, road maintenance, traffic control, and vehicle licensing.",
 
@@ -32,7 +32,7 @@
       "පාථ",
       "බස්",
       "රථ වාහන",
-      "traffic jam"
+      "traffic jam","paare","paara"
     ],
 
     "commonIssues": [
@@ -65,17 +65,7 @@
       "air pollution"
     ]
   },
-  {
-    "name": "Electricity & Power",
-    "keywords": [
-      "electric", "electric wire", "wire",
-      "electric pole", "pole",
-      "transformer", "meter box",
-      "street light", "street lamp", "lamp",
-      "spark", "exposed wire",
-      "power", "current"
-    ]
-  },
+
    {
     "name": "Waste Management",
     "keywords": [
@@ -84,7 +74,7 @@
       "bad smell", "odor",
       "garbage truck", "bin", "overflowing bin",
       "illegal dumping",
-      "waste pit", "sewer smell"
+      "waste pit", "sewer smell","kunu"
     ]
   },
   {
@@ -315,205 +305,6 @@
   },
 
   {
-    "name": "Electricity",
-
-    "description": "Responsible for electricity generation, distribution, and maintenance of power lines.",
-
-    "responsibilities": [
-      "Provide electricity supply",
-      "Fix power failures",
-      "Maintain power lines",
-      "Handle meter and billing issues"
-    ],
-
-    "categories": [
-      "Power Distribution",
-      "Maintenance",
-      "Billing"
-    ],
-
-    "keywords": [
-      "electricity",
-      "power",
-      "current",
-      "meter",
-      "transformer",
-      "line"
-    ],
-
-    "synonyms": [
-      "විදුලි",
-      "ceb",
-      "power cut"
-    ],
-
-    "commonIssues": [
-      "Power outages",
-      "Fallen power lines",
-      "Transformer failure",
-      "Billing errors",
-      "Meter malfunction"
-    ],
-
-    "complaintExamples": [
-      "No electricity since last night",
-      "Power line fallen on the road",
-      "Transformer exploded in the area",
-      "Electricity bill is incorrect",
-      "Meter not working properly"
-    ],
-
-    "active": true
-  },
-
-  {
-    "name": "Municipal Council",
-
-    "description": "Handles local government services including waste management, public spaces, and street maintenance.",
-
-    "responsibilities": [
-      "Garbage collection",
-      "Street cleaning",
-      "Maintain public parks",
-      "Manage local infrastructure"
-    ],
-
-    "categories": [
-      "Waste Management",
-      "Public Spaces",
-      "Street Maintenance"
-    ],
-
-    "keywords": [
-      "garbage",
-      "waste",
-      "street",
-      "drain",
-      "cleaning",
-      "municipal"
-    ],
-
-    "synonyms": [
-      "නගර සභාව",
-      "council",
-      "municipality"
-    ],
-
-    "commonIssues": [
-      "Garbage not collected",
-      "Blocked drains",
-      "Dirty streets",
-      "Overflowing bins",
-      "Broken pavements"
-    ],
-
-    "complaintExamples": [
-      "Garbage not collected for a week",
-      "Drain blocked causing flooding",
-      "Street full of waste and smell",
-      "Overflowing garbage bins",
-      "Broken pavement near market"
-    ],
-
-    "active": true
-  },
-
-  {
-    "name": "Housing",
-
-    "description": "Responsible for public housing projects, housing repairs, and residential welfare.",
-
-    "responsibilities": [
-      "Manage public housing",
-      "Handle housing complaints",
-      "Oversee housing repairs",
-      "Support low-income housing"
-    ],
-
-    "categories": [
-      "Public Housing",
-      "Residential Welfare"
-    ],
-
-    "keywords": [
-      "house",
-      "housing",
-      "building",
-      "apartment",
-      "repair"
-    ],
-
-    "synonyms": [
-      "නිවාස",
-      "housing authority"
-    ],
-
-    "commonIssues": [
-      "Leaking roofs",
-      "Unsafe buildings",
-      "Housing allocation issues",
-      "Poor living conditions"
-    ],
-
-    "complaintExamples": [
-      "Roof leaking during rain",
-      "Cracks in apartment walls",
-      "Unsafe housing conditions",
-      "Delay in housing allocation",
-      "No maintenance in housing complex"
-    ],
-
-    "active": true
-  },
-
-  {
-    "name": "Transport",
-
-    "description": "Handles public transport, roads, traffic control and vehicle licensing",
-
-    "categories": [
-      "Road Maintenance",
-      "Public Transport",
-      "Traffic Management",
-      "Vehicle Licensing"
-    ],
-
-    "keywords": [
-      "road",
-      "bus",
-      "traffic",
-      "license",
-      "highway",
-      "bridge",
-      "accident"
-    ],
-
-    "synonyms": [
-      "පාථ",
-      "බස්",
-      "රථ වාහන",
-      "traffic jam",
-
-      "paara",
-      "bus eka",
-      "traffic jam eka",
-      "license eka",
-      "road eka",
-      "bridge eka"
-    ],
-
-    "complaintExamples": [
-      "Road eka hariyata hadala naha",
-      "Bus eka hariyata enne naha",
-      "Morning traffic jam eka loku problem",
-      "Illegal parking nisa paara block wela",
-      "Bridge eka damage wela accident wenawa"
-    ],
-
-    "active": true
-  },
-
-  {
     "name": "Health",
 
     "description": "Responsible for hospitals, clinics, sanitation and public health",
@@ -604,7 +395,7 @@
   },
 
   {
-    "name": "Electricity",
+    "name": "Electricity & Power",
 
     "description": "Responsible for electricity generation, distribution and maintenance",
 
@@ -682,57 +473,8 @@
     ],
 
     "active": true
-  },
-
-  {
-    "name": "Municipal Council",
-
-    "description": "Handles garbage, drains, street cleaning and public places",
-
-    "categories": [
-      "Waste Management",
-      "Drainage",
-      "Street Cleaning"
-    ],
-
-    "keywords": [
-      "garbage",
-      "waste",
-      "drain",
-      "street",
-      "cleaning"
-    ],
-
-    "synonyms": [
-      "නගර සභාව",
-      "council",
-
-      "kasala",
-      "garbage eka collect karala naha",
-      "drain eka block",
-      "bad smell"
-    ],
-
-    "complaintExamples": [
-      "Garbage eka dawas walata collect karala naha",
-      "Drain eka block wela watura overflow",
-      "Street eka hariyata clean naha",
-      "Kasala loku smell eka",
-      "Bin eka overflow wela"
-    ],
-
-    "keywords": [
-      "bus", "road", "traffic", "license",
-      "paara", "paaara", "bridge",
-      "traffic signal", "signal",
-      "illegal parking", "parking",
-      "bus stop",
-      "footpath", "pavement", "sidewalk",
-      "access road", "main road",
-      "drainage road", "road drainage"
-    ],
-    "active": true
   }
+
 ]
 
 
