@@ -1,34 +1,41 @@
 // backend/src/ml/priorityModel.js
 
+import { spawn } from "child_process";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 /**
- * Simple complaint priority predictor
- * Returns one of: "HIGH", "MEDIUM", "LOW"
- *
- * This is a placeholder for a real ML model.
- * Currently, it uses keyword matching from the complaint description.
+ * Predict priority using trained ML model (Python)
  */
+export const predictPriority = (text) => {
+  return new Promise((resolve, reject) => {
+    if (!text || text.trim() === "") return resolve("MEDIUM");
 
-export const predictPriority = async (description) => {
-  if (!description || description.trim() === "") return "MEDIUM";
+    const scriptPath = path.join(__dirname, "predict_priority.py");
 
-  const text = description.toLowerCase();
+    const py = spawn("python", [scriptPath, text]);
 
-  // High priority keywords
-  const highKeywords = ["accident", "urgent", "danger", "emergency", "injury", "fire"];
-  // Medium priority keywords
-  const mediumKeywords = ["delay", "broken", "problem", "issue", "repair"];
-  // Low priority keywords
-  const lowKeywords = ["suggestion", "feedback", "request", "query"];
+    let output = "";
+    let errorOutput = "";
 
-  // Check for high priority
-  if (highKeywords.some((word) => text.includes(word))) return "HIGH";
+    py.stdout.on("data", (data) => {
+      output += data.toString();
+    });
 
-  // Check for medium priority
-  if (mediumKeywords.some((word) => text.includes(word))) return "MEDIUM";
+    py.stderr.on("data", (err) => {
+      errorOutput += err.toString();
+    });
 
-  // Check for low priority
-  if (lowKeywords.some((word) => text.includes(word))) return "LOW";
-
-  // Default priority
-  return "MEDIUM";
+    py.on("close", (code) => {
+      if (code !== 0) {
+        console.error("❌ Python error:", errorOutput);
+        reject(new Error("ML prediction failed"));
+      } else {
+        resolve(output.trim());
+      }
+    });
+  });
 };
