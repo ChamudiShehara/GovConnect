@@ -140,7 +140,7 @@ export default function MinisterDepartmentPage() {
                 </p>
 
                 <p className="mb-1">
-                  <strong>Title:</strong> {complaint.name}
+                  <strong>Name:</strong> {complaint.name}
                 </p>
 
                 <p className="mb-2">

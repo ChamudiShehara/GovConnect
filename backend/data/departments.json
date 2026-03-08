@@ -77,12 +77,7 @@
       "waste pit", "sewer smell","kunu"
     ]
   },
-  {
-    "name": "Education",
-    "keywords": ["school",
-    "teacher","student","exam", "education","class","lesson","syllabus","principal","attendance","university","college",
-    "results","marks","grades","textbook","classroom","laboratory","library"]
-  },
+
 
   {
 
@@ -197,61 +192,7 @@
     "active": true
   },
 
-  {
-    "name": "Police",
-
-    "description": "Responsible for maintaining law and order, preventing crime, and ensuring public safety.",
-
-    "responsibilities": [
-      "Maintain public order",
-      "Investigate crimes",
-      "Manage traffic violations",
-      "Respond to emergencies"
-    ],
-
-    "categories": [
-      "Crime Prevention",
-      "Public Safety",
-      "Traffic Law Enforcement",
-      "Emergency Response"
-    ],
-
-    "keywords": [
-      "crime",
-      "theft",
-      "robbery",
-      "assault",
-      "violence",
-      "police",
-      "accident",
-      "complaint"
-    ],
-
-    "synonyms": [
-      "පොලිසිය",
-      "law enforcement",
-      "cop"
-    ],
-
-    "commonIssues": [
-      "Theft incidents",
-      "Domestic violence",
-      "Public disturbances",
-      "Road accidents",
-      "Illegal activities"
-    ],
-
-    "complaintExamples": [
-      "House break-in during night",
-      "Street fight causing injuries",
-      "Illegal drugs sold in the area",
-      "Traffic accident with injuries",
-      "Noise disturbance late night"
-    ],
-
-    "active": true
-  },
-
+  
   {
     "name": "Water Supply",
 
@@ -350,50 +291,7 @@
     "active": true
   },
 
-  {
-    "name": "Education",
-
-    "description": "Manages schools, universities, teachers and exams",
-
-    "categories": [
-      "Schools",
-      "Universities",
-      "Examinations",
-      "Teachers"
-    ],
-
-    "keywords": [
-      "school",
-      "teacher",
-      "exam",
-      "student",
-      "university",
-      "class"
-    ],
-
-    "synonyms": [
-      "පාසල්",
-      "විභාග",
-      "teacher",
-
-      "pasala",
-      "school eka",
-      "teacher kenek enne naha",
-      "exam timetable naha",
-      "class ekak naha"
-    ],
-
-    "complaintExamples": [
-      "Teacher kenek school eka enne naha",
-      "Exam timetable eka release wela naha",
-      "University registration problem thiyenawa",
-      "Class room hariyata naha",
-      "Students la safety problem thiyenawa"
-    ],
-
-    "active": true
-  },
-
+ 
   {
     "name": "Electricity & Power",
 
